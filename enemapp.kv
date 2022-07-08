@@ -1,0 +1,313 @@
+Manager:
+    Menu:
+        name: 'menu'
+    QuestMath:
+        name: 'quest_math'
+    QuestLang:
+        name: 'quest_lang'
+    QuestBio:
+        name: 'quest_bio'
+    QuestQuim:
+        name: 'quest_quim'
+    QuestFis:
+        name: 'quest_fis'
+    QuestHist:
+        name: 'quest_hist'
+    QuestHum:
+        name: 'quest_hum'
+
+<MenuButton@Button>:
+    font_size: '12sp'
+    background_normal: 'botao.png'
+    background_down: 'botaoPressionado.png'
+
+
+<Menu>:
+    canvas:
+        Color:
+            rgba:1,1,1,1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source: 'telaDeFundoInicial.png'
+    BoxLayout:
+        orientation: 'vertical'
+        size: '1280', '720'
+        padding: '50dp', '50dp'
+        spacing: '150dp'
+        BoxLayout:
+            Label:
+                text: 'Clique na matéria desejada para gerar uma questão aleatória. Feito por Caio Rigues. Site disponível em: https://projetoagathaedu.com.br/banco-de-questoes.php'
+                text_size: self.width, None
+                size_hint: 1, None
+                height: self.texture_size[1]
+        BoxLayout:
+            spacing: '65dp'
+            MenuButton:
+                text: 'Matemática'
+                on_release: app.root.current = 'quest_math'
+            MenuButton:
+                text: 'Linguagens'
+                on_release: app.root.current = 'quest_lang'
+        BoxLayout:
+            spacing: '65dp'
+            MenuButton:
+                text: 'Biologia'
+                on_release: app.root.current = 'quest_bio'
+            MenuButton:
+                text: 'Química'
+                on_release: app.root.current = 'quest_quim'
+        BoxLayout:
+            spacing: '65dp'
+            MenuButton:
+                text: 'Física'
+                on_release: app.root.current = 'quest_fis'
+            MenuButton:
+                text: 'História'
+                on_release: app.root.current = 'quest_hist'
+        BoxLayout:
+            spacing: '65dp'
+            MenuButton:
+                text: 'Humanas'
+                on_release: app.root.current = 'quest_hum'
+            MenuButton:
+                text: 'Sair'
+                on_release: app.stop()
+
+<QuestMath>:
+    canvas:
+        Color:
+            rgba:1,1,1,1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source: 'telaDeFundoQuestão.png'
+    BoxLayout:
+        id: 'questaoTela'
+        spacing: '300dp'
+        orientation: 'vertical'
+        size: '1280', '720'
+        Label:
+            id: questMathScreen
+            text: root.print_quest()
+            padding: '50dp', '50dp'
+            text_size: self.width, None
+            size_hint: 1, None
+            height: self.texture_size[1]
+        BoxLayout:
+            spacing: '65dp'
+            MenuButton:
+                text: 'Voltar'
+                on_release: app.root.current = 'menu'
+            MenuButton:
+                text: 'Gerar outra questão'
+                on_release: root.press()
+            MenuButton:
+                id: respostamath
+                text: 'Mostrar Resposta'
+                on_release: root.answerclick()
+
+
+
+<QuestLang>:
+    canvas:
+        Color:
+            rgba:1,1,1,1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source: 'telaDeFundoQuestão.png'
+    BoxLayout:
+        id: 'questaoTela'
+        spacing: '300dp'
+        orientation: 'vertical'
+        size: '1280', '720'
+        Label:
+            id: questLinScreen
+            text: root.print_quest()
+            padding: '50dp', '50dp'
+            text_size: self.width, None
+            size_hint: 1, None
+            height: self.texture_size[1]
+        BoxLayout:
+            spacing: '65dp'
+            MenuButton:
+                text: 'Voltar'
+                on_release: app.root.current = 'menu'
+            MenuButton:
+                text: 'Gerar outra questão'
+                on_release: root.press()
+            MenuButton:
+                id: respostalang
+                text: 'Mostrar Resposta'
+                on_release: root.answerclick()
+
+
+<QuestBio>:
+    canvas:
+        Color:
+            rgba:1,1,1,1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source: 'telaDeFundoQuestão.png'
+    BoxLayout:
+        id: 'questaoTela'
+        spacing: '300dp'
+        orientation: 'vertical'
+        size: '1280', '720'
+        Label:
+            id: questBioScreen
+            text: root.print_quest()
+            padding: '50dp', '50dp'
+            text_size: self.width, None
+            size_hint: 1, None
+            height: self.texture_size[1]
+        BoxLayout:
+            spacing: '65dp'
+            MenuButton:
+                text: 'Voltar'
+                on_release: app.root.current = 'menu'
+            MenuButton:
+                text: 'Gerar outra questão'
+                on_release: root.press()
+            MenuButton:
+                id: respostabio
+                text: 'Mostrar Resposta'
+                on_release: root.answerclick()
+
+
+<QuestQuim>:
+    canvas:
+        Color:
+            rgba:1,1,1,1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source: 'telaDeFundoQuestão.png'
+    BoxLayout:
+        id: 'questaoTela'
+        spacing: '300dp'
+        orientation: 'vertical'
+        size: '1280', '720'
+        Label:
+            id: questQuiScreen
+            text: root.print_quest()
+            padding: '50dp', '50dp'
+            text_size: self.width, None
+            size_hint: 1, None
+            height: self.texture_size[1]
+        BoxLayout:
+            spacing: '65dp'
+            MenuButton:
+                text: 'Voltar'
+                on_release: app.root.current = 'menu'
+            MenuButton:
+                text: 'Gerar outra questão'
+                on_release: root.press()
+            MenuButton:
+                id: respostaquim
+                text: 'Mostrar Resposta'
+                on_release: root.answerclick()
+
+
+<QuestFis>:
+    canvas:
+        Color:
+            rgba:1,1,1,1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source: 'telaDeFundoQuestão.png'
+    BoxLayout:
+        id: 'questaoTela'
+        spacing: '300dp'
+        orientation: 'vertical'
+        size: '1280', '720'
+        Label:
+            id: questFisScreen
+            text: root.print_quest()
+            padding: '50dp', '50dp'
+            text_size: self.width, None
+            size_hint: 1, None
+            height: self.texture_size[1]
+        BoxLayout:
+            spacing: '65dp'
+            MenuButton:
+                text: 'Voltar'
+                on_release: app.root.current = 'menu'
+            MenuButton:
+                text: 'Gerar outra questão'
+                on_release: root.press()
+            MenuButton:
+                id: respostafis
+                text: 'Mostrar Resposta'
+                on_release: root.answerclick()
+
+
+<QuestHist>:
+    canvas:
+        Color:
+            rgba:1,1,1,1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source: 'telaDeFundoQuestão.png'
+    BoxLayout:
+        id: 'questaoTela'
+        spacing: '300dp'
+        orientation: 'vertical'
+        size: '1280', '720'
+        Label:
+            id: questHisScreen
+            text: root.print_quest()
+            padding: '50dp', '50dp'
+            text_size: self.width, None
+            size_hint: 1, None
+            height: self.texture_size[1]
+        BoxLayout:
+            spacing: '65dp'
+            MenuButton:
+                text: 'Voltar'
+                on_release: app.root.current = 'menu'
+            MenuButton:
+                text: 'Gerar outra questão'
+                on_release: root.press()
+            MenuButton:
+                id: respostahis
+                text: 'Mostrar Resposta'
+                on_release: root.answerclick()
+
+
+<QuestHum>:
+    canvas:
+        Color:
+            rgba:1,1,1,1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source: 'telaDeFundoQuestão.png'
+    BoxLayout:
+        id: 'questaoTela'
+        spacing: '300dp'
+        orientation: 'vertical'
+        size: '1280', '720'
+        Label:
+            id: questHumScreen
+            text: root.print_quest()
+            padding: '50dp', '50dp'
+            text_size: self.width, None
+            size_hint: 1, None
+            height: self.texture_size[1]
+        BoxLayout:
+            spacing: '65dp'
+            MenuButton:
+                text: 'Voltar'
+                on_release: app.root.current = 'menu'
+            MenuButton:
+                text: 'Gerar outra questão'
+                on_release: root.press()
+            MenuButton:
+                id: respostahum
+                text: 'Mostrar Resposta'
+                on_release: root.answerclick()
