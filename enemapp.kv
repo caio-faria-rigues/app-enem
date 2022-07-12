@@ -33,8 +33,8 @@ Manager:
     BoxLayout:
         orientation: 'vertical'
         size: '1280', '720'
-        padding: '50dp', '50dp'
-        spacing: '150dp'
+        padding: '25dp', '50dp'
+        spacing: '50dp'
         BoxLayout:
             Label:
                 text: 'Clique na matéria desejada para gerar uma questão aleatória. Feito por Caio Rigues. Site disponível em: https://projetoagathaedu.com.br/banco-de-questoes.php'
@@ -92,9 +92,10 @@ Manager:
             text: root.print_quest()
             padding: '50dp', '50dp'
             text_size: self.width, None
-            size_hint: 1, None
+            size_hint: 1, 0.8
             height: self.texture_size[1]
         BoxLayout:
+            size_hint: 1, 0.2
             spacing: '65dp'
             MenuButton:
                 text: 'Voltar'
@@ -127,10 +128,11 @@ Manager:
             text: root.print_quest()
             padding: '50dp', '50dp'
             text_size: self.width, None
-            size_hint: 1, None
+            size_hint: 1, 0.8
             height: self.texture_size[1]
         BoxLayout:
             spacing: '65dp'
+            size_hint: 1, 0.2
             MenuButton:
                 text: 'Voltar'
                 on_release: app.root.current = 'menu'
@@ -161,10 +163,11 @@ Manager:
             text: root.print_quest()
             padding: '50dp', '50dp'
             text_size: self.width, None
-            size_hint: 1, None
+            size_hint: 1, 0.8
             height: self.texture_size[1]
         BoxLayout:
             spacing: '65dp'
+            size_hint: 1, 0.2
             MenuButton:
                 text: 'Voltar'
                 on_release: app.root.current = 'menu'
@@ -195,10 +198,11 @@ Manager:
             text: root.print_quest()
             padding: '50dp', '50dp'
             text_size: self.width, None
-            size_hint: 1, None
+            size_hint: 1, 0.8
             height: self.texture_size[1]
         BoxLayout:
             spacing: '65dp'
+            size_hint: 1, 0.2
             MenuButton:
                 text: 'Voltar'
                 on_release: app.root.current = 'menu'
@@ -229,10 +233,11 @@ Manager:
             text: root.print_quest()
             padding: '50dp', '50dp'
             text_size: self.width, None
-            size_hint: 1, None
+            size_hint: 1, 0.8
             height: self.texture_size[1]
         BoxLayout:
             spacing: '65dp'
+            size_hint: 1, 0.2
             MenuButton:
                 text: 'Voltar'
                 on_release: app.root.current = 'menu'
@@ -263,10 +268,11 @@ Manager:
             text: root.print_quest()
             padding: '50dp', '50dp'
             text_size: self.width, None
-            size_hint: 1, None
+            size_hint: 1, 0.8
             height: self.texture_size[1]
         BoxLayout:
             spacing: '65dp'
+            size_hint: 1, 0.2
             MenuButton:
                 text: 'Voltar'
                 on_release: app.root.current = 'menu'
@@ -297,10 +303,11 @@ Manager:
             text: root.print_quest()
             padding: '50dp', '50dp'
             text_size: self.width, None
-            size_hint: 1, None
+            size_hint: 1, 0.8
             height: self.texture_size[1]
         BoxLayout:
             spacing: '65dp'
+            size_hint: 1, 0.2
             MenuButton:
                 text: 'Voltar'
                 on_release: app.root.current = 'menu'
